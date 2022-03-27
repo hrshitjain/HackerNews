@@ -8,22 +8,17 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
   View,
 } from 'react-native';
 
 import {
   Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { AppStyle } from './app/css/AppStyleConfig';
+import RootNavigator from './app/navigation/RootNavigator';
 
 
 const App = () => {
@@ -34,9 +29,9 @@ const App = () => {
   };
 
   return (
-    <View style={styles.container}>
-    <Text>Open up App.js to start working on your app!</Text>
-    <StatusBar style="auto" />
+    <View style={AppStyle.mainapp}>
+    <StatusBar backgroundColor={backgroundStyle.backgroundColor} barStyle="dark-content" />
+    <RootNavigator/>
   </View>
   );
 };
